@@ -70,6 +70,9 @@
     cursor: pointer;
     display: none;
 }
+.menu-btn:hover{
+    color: crimson;
+}
 
 
 
@@ -82,6 +85,7 @@
     background-size: cover;
     min-height: 500px;
     font-family: 'ubuntu', sans-serif;
+    transition: all 0.6s ease;
 }
 .home .max-width{
     margin: auto 0 auto 40px;
@@ -89,10 +93,19 @@
 .home .home-content .text1, .text2{
     font-size: 27px;
 }
-.home .home-content .text3{
+.home .home-content .text4{
+    font-size: 20px;
+    display: none;
+}
+.home .home-content .text3, .text5{
     font-size: 70px;
     font-weight: 600;
     margin: -3px;
+}
+.home .home-content .text5{
+    color: crimson;
+    transition: all 0.4s ease;
+    display: none;
 }
 span{
     color: crimson;
@@ -105,6 +118,13 @@ span{
 
 
 @media(max-width:856px){
+    .home{
+        background: url(img/bkimg2.png);
+        background-size: cover;
+        transition: all 0.5s ease;
+    }
+
+
     .max-width{
         padding: 0 50px;
     }
@@ -124,10 +144,13 @@ span{
         transition: all 0.3s ease;
 
     }
+    .navbar .logo a{
+        font-size: 30px;
+    }
     .navbar .menu.active{
         left: 0;
     }
-
+    
     .menu-btn i.active:before{
         content: "\f00d";
     }
@@ -138,5 +161,67 @@ span{
         display: inline-block;
         margin: 20px 0;
         font-size: 25px;
+    }
+    .home .home-content .text1, .text2{
+        font-size: 23px;
+    }
+    .home .home-content .text3{
+        font-size: 63px;
+        padding: 5px;
+    }
+    .home .max-width{
+        margin-left: 0px;
+    }
+}
+@media(max-width: 730px){
+    .max-width{
+        padding: 0px 40px;
+    }
+    
+    .navbar .menu li a{
+        
+        font-size: 20px;
+    }
+    .home .home-content .text1, .text2{
+        font-size: 20px;
+    }
+    .home .home-content .text3{
+        font-size: 58px;
+        padding: 5px;
+    }
+    .home .max-width{
+        margin-left: 0px;
+    }
+}
+@media(max-width:507px){
+    .max-width{
+        padding: 0px 35px;
+    }
+    .home{
+        background: url(img/bkimg3.jpg);
+        background-size: cover;
+    }
+    .navbar .menu li a{
+        font-size: 18px;
+    }
+    .navbar .logo a{
+        font-size: 27px;
+    }
+
+    .home .home-content .text1, .text2, .text3{
+        display: none;
+    }
+    .home .home-content .text4{
+        display: block;
+        padding-top: 5px;
+        transition: all 0.4s ease;       
+        
+    }
+    .home .home-content .text5{
+        display: block;       
+        font-size: 45px;
+    }
+    .home{
+        justify-content: center;
     }
 }
